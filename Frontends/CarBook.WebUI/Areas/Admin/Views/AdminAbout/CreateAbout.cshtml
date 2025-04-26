@@ -13,10 +13,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Yeni Hakkımda Bilgisi Girişi</h4>
+                        <h4 class="card-title">Yeni Hakkımda Bilgisi Ekleme</h4>
                         <p class="card-subtitle mb-4">
-                            Hakkımda alanına veri girişini aşağıdan yapabilirsiniz. Tasarımda bozulma olmaması adına yeni bir hakkımda girişi yaptıktan sonra önceki banner alanını silin, sadece 1 tane banner verisi kalacak şekilde verileri kaydedin.
-
+                            Hakkımızda alanına yeni veri girişini aşağıdaki form üzerinden gerçekleştirebilirsiniz.
+                            Tasarım ve içerik bütünlüğünün korunabilmesi için, yeni bir "Hakkımızda" verisi ekledikten sonra eski banner alanına ait kaydı silmeniz gerekmektedir.
+                            Sistemde her zaman yalnızca bir adet güncel banner verisi bulunmalıdır. Bu kurala dikkat ederek veri kaydı yapmanız, sitenizin görünümünde olası tasarım bozulmalarını önleyecektir.
                         </p>
                         <form method="post">
                             <div class="form-group">
@@ -32,7 +33,12 @@
                                 <label for="exampleInputImageUrl"> Görsel Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel Url Giriniz">
                             </div>
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Hakkımda Bilgisini Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Hakkımda Bilgisini Kaydet
+                            </button>
+
                         </form>
                     </div>
                 </div>

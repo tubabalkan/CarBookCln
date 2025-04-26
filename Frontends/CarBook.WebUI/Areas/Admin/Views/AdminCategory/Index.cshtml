@@ -11,9 +11,9 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Blog Kategori Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa - Blog Kategori Alanaı</h4>
                         <p class="card-subtitle mb-4">
-                            Ana sayfada hakkımda alanında bulunan bilgileri aşağıdan düzenleyebilirsiniz. Tema bütünlüğünün bozulmamaması adına lütfen sadece 1 tane veri girişi yapınız.
+                            Bu sayfa üzerinden blog kategorilerinizi kolayca yönetebilirsiniz. Mevcut kategorilerinizi güncelleyebilir, silme işlemi gerçekleştirebilir ve her kategoriye ait blog yazılarına hızlıca ulaşabilirsiniz. Kategoriler, içeriklerinizin düzenli olmasını sağlayarak ziyaretçilerinizin aradıkları yazılara kolayca erişmelerine yardımcı olur. Kategorilere ait blogları görüntüleyerek içeriğinizi daha verimli şekilde yönetebilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -34,14 +34,37 @@
                                         <tr>
                                             <th>@count</th>
                                             <th>@item.Name</th>
-                                            <td><a href="/Admin/AdminCategory/RemoveCategory/@item.CategoryId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId" class="btn btn-outline-success">Kategoriye Ait Bloglar</a></td>
+                                            <td>
+                                                <a href="/Admin/AdminCategory/RemoveCategory/@item.CategoryId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 8px; padding: 6px 12px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 8px; padding: 6px 12px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminCategory/UpdateCategory/@item.CategoryId"
+                                                   class="btn btn-info btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 8px; padding: 6px 12px; transition: 0.3s;">
+                                                    <i class="fas fa-book me-2"></i> Kategoriye Ait Bloglar
+                                                </a>
+                                            </td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-outline-primary">Yeni Kategori Girişi</a></td>
+                            
+                            <td>
+                                <a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Kategori Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

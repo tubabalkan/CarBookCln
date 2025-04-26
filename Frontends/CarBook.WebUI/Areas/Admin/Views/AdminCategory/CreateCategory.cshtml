@@ -13,16 +13,22 @@
                     <div class="card-body">
                         <h4 class="card-title">Yeni Kategori Bilgisi Girişi</h4>
                         <p class="card-subtitle mb-4">
-                            Hakkımda alanına veri girişini aşağıdan yapabilirsiniz. Tasarımda bozulma olmaması adına yeni bir hakkımda girişi yaptıktan sonra önceki banner alanını silin, sadece 1 tane banner verisi kalacak şekilde verileri kaydedin.
+                            Bu sayfa üzerinden yeni bir blog kategorisi oluşturabilirsiniz. Kategori adı girerek, blog yazılarınızı daha düzenli bir şekilde gruplandırabilirsiniz. Kategoriler, ziyaretçilerinizin ilgilendikleri içeriklere daha hızlı erişmelerini sağlar.
 
+                            Kategori oluştururken sadece kategori adı girmeniz yeterlidir. Bu sayede blog yazılarınız daha organize bir şekilde sunulabilir ve içeriklerinizin erişilebilirliği artar. Yeni kategori oluşturma işlemini tamamladıktan sonra, ilgili kategoriyi yönetmeye ve içeriklerinizi düzenlemeye devam edebilirsiniz.
                         </p>
                         <form method="post">
                             <div class="form-group">
                                 <label for="exampleInputName">Kategori İsmi</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsim Giriniz">
                             </div>
-                           
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kategori Bilgisini Kaydet</button>
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Kategori Bilgisini Kaydet
+                            </button>
+
                         </form>
                     </div>
                 </div>

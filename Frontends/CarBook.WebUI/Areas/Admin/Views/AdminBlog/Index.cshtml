@@ -10,10 +10,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Blog Listesi ve İşlemleri</h4>
+                        <h4 class="card-title">Ana Sayfa - Blog Listesi ve İşlemleri</h4>
                         <p class="card-subtitle mb-4">
-                           Bloglarla ilgili silme, güncellme ve blog listesi erişimini görebilirsiniz. Yeni blog ekleme işlemi buradan yapılamamamaktadır. Eğer blog ekleme işlemi yapmak isterseniz sisteme 
-                           yazar olarak giriş yapmanız gerekmektedir. Her yazar sadece kendi bloglarını düzenleyebilir. Bunun için uygulamada Login/WriterLogin sayfası üzerinden giriş yapabilirsiniz.
+                            Bloglarınızı silme, mevcut blog listenize erişme ve bloglara gelen yorumlara erişebilme işlemleri bu alandan yapılabilmektedir. 
+                            Ancak, yeni blog eklemek için bu bölüm kullanılamaz. Yeni bir blog eklemek isterseniz, sisteme yazar olarak giriş yapmanız gerekmektedir.
+                            Unutmayın ki her yazar yalnızca kendi bloglarını düzenleyebilir. Yazar olarak sisteme giriş yapmak için Login/WriterLogin sayfasını ziyaret edebilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -45,9 +46,29 @@
                                             <td>@item.CreatetDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</td>
 
 
-                                            <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId" class="btn btn-outline-danger">Kaldır</a></td>
-                                            <td><a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-outline-dark">Bloğu Aç</a></td>
-                                            <td><a href="/Admin/AdminComment/Index/@item.BlogId" class="btn btn-outline-warning">Yorumlar</a></td>
+                                            <td>
+                                                <a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Kaldır
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Blog/BlogDetail/@item.BlogId"
+                                                   class="btn btn-dark btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-eye me-2"></i> Bloğu Aç
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminComment/Index/@item.BlogId"
+                                                   class="btn btn-warning btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-comment me-2"></i> Yorumlar
+                                                </a>
+                                            </td>
+                                            
+
                                         </tr>
                                     }
                                 </tbody>

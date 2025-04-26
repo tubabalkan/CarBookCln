@@ -12,42 +12,53 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Hakkımda Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa - Hakkımızda Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Ana sayfada hakkımda alanında bulunan bilgileri aşağıdan düzenleyebilirsiniz. Tema bütünlüğünün bozulmamaması adına lütfen sadece 1 tane veri girişi yapınız.
+                            Ana sayfanızda yer alan "Hakkımızda" bölümündeki içerikleri aşağıdaki alandan güncelleyebilirsiniz. Web sitenizin görsel ve içerik uyumunun korunabilmesi adına, lütfen sadece tek bir veri girişi yaparak işlem gerçekleştiriniz.
+                            Bu bölüm, ziyaretçilerinize firmanız hakkında ilk izlenimi sunacağı için, paylaşacağınız bilginin özgün, anlaşılır ve marka kimliğinizi yansıtan bir dilde olmasına özen göstermenizi öneririz.
+                            Tema bütünlüğünün ve kullanıcı deneyiminin en iyi şekilde devam etmesi için kurallara uygun bir şekilde düzenleme yapmanız büyük önem taşımaktadır.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                     <tr>
-
                                         <th>Başlık</th>
                                         <th>Açıklama</th>
                                         <th>Image Url</th>
                                         <th>Sil</th>
                                         <th>Güncelle </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-
                                         <tr>
-
                                             <td>@item.Title</td>
                                             <td>@item.Description</td>
-                                           
-                                            <td><img src="@item.ImageUrl" width="50" height="50" style="margin-right:10px" />
-
-                                            <td><a href="/Admin/AdminAbout/RemoveAbout/@item.AboutId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminAbout/UpdateAbout/@item.AboutId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><img src="@item.ImageUrl" width="150" height="150" style="margin-right:10px" />
+                                            <td>
+                                                <a href="/Admin/AdminAbout/RemoveAbout/@item.AboutId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminAbout/UpdateAbout/@item.AboutId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-outline-primary">Yeni Hakkımda Girişi</a></td>
+                            <td>
+                                <a href="/Admin/AdminAbout/CreateAbout/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Hakkımda Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

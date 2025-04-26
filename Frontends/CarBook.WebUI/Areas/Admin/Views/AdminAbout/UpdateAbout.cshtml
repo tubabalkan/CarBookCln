@@ -14,9 +14,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Hakkımda Bilgisi Güncelleme Sayfası</h4>
-                        <p class="card-subtitle mb-4">Hakkımda ile ilgili bilgilreri aşağıdaki kutucuklardan güncelleyebilirsiniz. Veri girişinden sonra kaydet butonuna tıklayarak işlemi tamamlayabilirsiniz.</p>
+                        <p class="card-subtitle mb-4">
+                            Hakkımızda Bilgilerini Aşağıdaki Kutucuklardan Güncelleyebilirsiniz.
+                            Veri girişinizi tamamladıktan sonra "Kaydet" butonuna tıklayarak işleminizi kaydedebilirsiniz.
+                        </p>
                         <form method="post">
-
 
                             <div class="form-group">
                                 <input type="hidden" asp-for="AboutId" />
@@ -33,9 +35,14 @@
                                 <label for="exampleInputImageUrl"> Image Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel Url Giriniz">
                             </div>
-                            
 
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Hakkımda Billgisini Kaydet</button>
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Güncel Hakkımda Bilgisini Kaydet
+                            </button>
+
                         </form>
                     </div>
                 </div>

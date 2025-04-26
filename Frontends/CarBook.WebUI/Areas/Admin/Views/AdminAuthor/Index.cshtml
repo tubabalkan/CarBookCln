@@ -14,9 +14,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Yazar Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa - Yazar Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Ana sayfada hakkımda alanında bulunan bilgileri aşağıdan düzenleyebilirsiniz. Tema bütünlüğünün bozulmamaması adına lütfen sadece 1 tane veri girişi yapınız.
+                            Yazar sayfasındaki bilgileri aşağıdaki kutucuklardan güncelleyebilir, yeni yazarlar ekleyebilir ya da mevcut yazarları silebilirsiniz.
+                            Ayrıca, her bir yazarın bloglarına erişebilir ve içeriklerini yönetebilirsiniz.
+                            Yapacağınız değişiklikleri kaydetmek için "Kaydet" butonuna tıklamayı unutmayınız.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -28,8 +30,6 @@
                                         <th>Sil</th>
                                         <th>Güncelle </th>
                                         <th>Yazarın Blogları </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,16 +39,39 @@
                                         <tr>
                                             <th>@count</th>
                                             <td><img src="@item.ImageUrl" width="50" height="50" style="margin-right:10px"/> @item.Name</td>
-                                           
-                                           
-                                            <td><a href="/Admin/AdminAuthor/RemoveAuthor/@item.AuthorId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-success">Yazarın Blogları</a></td>
+
+                                            <td>
+                                                <a href="/Admin/AdminAuthor/RemoveAuthor/@item.AuthorId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-3"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-3"></i> Güncelle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId"
+                                                   class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-blog me-3"></i> Yazarın Blogları
+                                                </a>
+                                            </td>
+
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminAuthor/CreateAuthor/" class="btn btn-outline-primary">Yeni Yazar Bilgisi Girişi</a></td>
+                            
+                            <a href="/Admin/AdminAuthor/CreateAuthor/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                <i class="fas fa-plus-circle"></i> Yeni Yazar Bilgisi Girişi
+                            </a>
+
                         </div>
                     </div>
                 </div>
