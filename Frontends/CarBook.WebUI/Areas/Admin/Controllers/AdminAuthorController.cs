@@ -14,7 +14,7 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
 
         public AdminAuthorController(IHttpClientFactory httpClientFactory)
         {
-            _httpClientFactory = httpClientFactory;
+            _httpClientFactory = httpClientFactory; 
         }
 
         [Route("Index")]
