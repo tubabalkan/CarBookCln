@@ -1,9 +1,13 @@
-﻿@model List<ResultFooterAddressDto>
+﻿@model List<ResultLocationDto>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
+
+
+
+
 
 
 <div class="page-content">
@@ -12,9 +16,9 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Footer Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa Locasyon Alanı</h4>
                         <p class="card-subtitle mb-4">
-                           Footer
+                           Lokasyon ile ilgili yazı yaz
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -22,12 +26,10 @@
                                     <tr>
 
                                         <th>#</th>
-                                        <th>Açıklama</th>
-                                        <th>Adress</th>
-                                        <th>Telefon Numarası</th>
-                                        <th>Mail Adresi </th>
+                                        <th>Lokasyon Adı</th>
                                         <th>Sil</th>
                                         <th>Güncelle </th>
+                                        <th>Konumu Gör </th>
 
 
                                     </tr>
@@ -37,20 +39,17 @@
                                     {
                                         count++;
                                         <tr>
-                                            <th>@count</th>
-                                            <th>@item.Description</th>
-                                            <th>@item.Address</th>
-                                            <th>@item.PhoneNumber</th>
-                                            <th>@item.Email</th>
 
-
-                                            <td><a href="/Admin/AdminFooterAdress/RemoveFooterAdress/@item.FooterAddressId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminFooterAdress/UpdateFooterAdress/@item.FooterAddressId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>@count</td>
+                                            <td>@item.Name</td>
+                                            <td><a href="/Admin/AdminLocation/RemoveLocation/@item.LocationId" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId" class="btn btn-outline-info">Konumu Gör</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminFooterAdress/CreateFooterAdress/" class="btn btn-outline-primary">Yeni Footer Bilgisi Girişi</a></td>
+                            <td><a href="/Admin/AdminLocation/CreateLocation/" class="btn btn-outline-primary">Yeni Lokasyon Girişi</a></td>
                         </div>
                     </div>
                 </div>
@@ -58,7 +57,3 @@
         </div>
     </div>
 </div>
-
-
-
-

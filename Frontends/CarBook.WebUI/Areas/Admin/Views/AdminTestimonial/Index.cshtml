@@ -1,9 +1,13 @@
-﻿@model List<ResultFooterAddressDto>
+﻿@model List<ResultTestimonialDto>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
     int count = 0;
 }
+
+
+
 
 
 <div class="page-content">
@@ -12,9 +16,9 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Footer Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa Referans Alanaı</h4>
                         <p class="card-subtitle mb-4">
-                           Footer
+                            referanssssss
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -22,10 +26,10 @@
                                     <tr>
 
                                         <th>#</th>
-                                        <th>Açıklama</th>
-                                        <th>Adress</th>
-                                        <th>Telefon Numarası</th>
-                                        <th>Mail Adresi </th>
+                                        <th>Ad Soyad</th>
+                                        <th>Başlık</th>
+                                        <th>Yorum</th>
+                                        <th>Görsel</th>
                                         <th>Sil</th>
                                         <th>Güncelle </th>
 
@@ -38,19 +42,17 @@
                                         count++;
                                         <tr>
                                             <th>@count</th>
-                                            <th>@item.Description</th>
-                                            <th>@item.Address</th>
-                                            <th>@item.PhoneNumber</th>
-                                            <th>@item.Email</th>
-
-
-                                            <td><a href="/Admin/AdminFooterAdress/RemoveFooterAdress/@item.FooterAddressId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminFooterAdress/UpdateFooterAdress/@item.FooterAddressId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <th>@item.Name</th>
+                                            <th>@item.Title</th>
+                                            <th>@item.Comment</th>
+                                            <td><img src="@item.ImageUrl" width="50" height="50" style="margin-right:10px" /> </td>
+                                            <td><a href="/Admin/AdminTestimonial/RemoveTestimonial/@item.TestimonialId" class="btn btn-outline-danger">Sil</a></td>
+                                            <td><a href="/Admin/AdminTestimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Güncelle</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminFooterAdress/CreateFooterAdress/" class="btn btn-outline-primary">Yeni Footer Bilgisi Girişi</a></td>
+                            <td><a href="/Admin/AdminTestimonial/CreateTestimonial/" class="btn btn-outline-primary">Yeni Referans Bilgisi Girişi</a></td>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,52 @@
+﻿@model UpdateTestimonialDto
+
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Referans Bilgisi Güncelleme Sayfası</h4>
+                        <p class="card-subtitle mb-4">referanss</p>
+                        <form method="post">
+
+
+                            <div class="form-group">
+                                <input type="hidden" asp-for="TestimonialId" />
+
+                                <label for="exampleInputName"> İsim</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsmi Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription"> Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Title" placeholder="Başlık Giriniz">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription"> Yorum</label>
+                                <textarea rows="5" class="form-control" asp-for="Comment" placeholder="Yorum  Giriniz"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImageUrl"> Image Url</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel Url Giriniz">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Referans Billgisini Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
