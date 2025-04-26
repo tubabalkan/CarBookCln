@@ -1,0 +1,64 @@
+﻿@model List<ResultAllBlogsWithAuthor>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Ana Sayfa Blog Listesi ve İşlemleri</h4>
+                        <p class="card-subtitle mb-4">
+                           Bloglarla ilgili silme, güncellme ve blog listesi erişimini görebilirsiniz. Yeni blog ekleme işlemi buradan yapılamamamaktadır. Eğer blog ekleme işlemi yapmak isterseniz sisteme 
+                           yazar olarak giriş yapmanız gerekmektedir. Her yazar sadece kendi bloglarını düzenleyebilir. Bunun için uygulamada Login/WriterLogin sayfası üzerinden giriş yapabilirsiniz.
+                        </p>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+
+                                        <th>#</th>
+                                        <th>Başlık</th>
+                                        <th>Yazar</th>
+                                        <th>Kategori</th>
+                                        <th>Tarih</th>
+                                        <th>Kaldır</th>
+                                        <th>Bloğu Aç </th>
+                                        <th>Yorumlar </th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+
+                                            <td>@count</td>
+                                            <td>@item.Title</td>
+                                            <td>@item.AuthorName</td>
+                                            <td>@item.CategoryId</td>
+                                            <td>@item.CreatetDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</td>
+
+
+                                            <td><a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId" class="btn btn-outline-danger">Kaldır</a></td>
+                                            <td><a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-outline-dark">Bloğu Aç</a></td>
+                                            <td><a href="/Admin/AdminComment/Index/@item.BlogId" class="btn btn-outline-warning">Yorumlar</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
