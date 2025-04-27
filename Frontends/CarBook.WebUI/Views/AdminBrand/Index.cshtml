@@ -17,9 +17,10 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Araba Markaları Listesi</h4>
+                        <h4 class="card-title">Ana Sayfa - Araba Markaları Listesi Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Arabalarla ilgili marka listesi, markalar üzerinden düzenleme ve bir markayı kaldırma işlemini buradan gerçekleştirebilirsiniz.
+                            Arabalarla ilgili marka listesini buradan görüntüleyebilir, markalar üzerinde düzenleme yapabilir ve istenmeyen markaları kolaylıkla kaldırabilirsiniz. 
+                            Markalarınızı düzenleyerek, araçlarınızı daha organize bir şekilde yönetebilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -30,8 +31,6 @@
                                         <th>Sil</th>
                                         <th>Güncelle </th>
                                         <th>Markaya Ait Araçlar </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,14 +40,37 @@
                                         <tr>
                                             <th scope="row">@count</th>
                                             <td>@item.name</td>
-                                            <td><a href="/AdminBrand/RemoveBrand/@item.brandId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/AdminBrand/UpdateBrand/@item.brandId" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/AdminBrand/UpdateBrand/@item.brandId" class="btn btn-outline-dark">Markaya Ait Araçlar </a></td>
+                                            <td>
+                                                <a href="/AdminBrand/RemoveBrand/@item.brandId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminBrand/UpdateBrand/@item.brandId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminBrand/UpdateBrand/@item.brandId"
+                                                   class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-car me-2"></i> Markaya Ait Araçlar
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/AdminBrand/CreateBrand/" class="btn btn-outline-primary">Yeni Marka Girişi</a></td>
+                            <td>
+                                <a href="/AdminBrand/CreateBrand/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Marka Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

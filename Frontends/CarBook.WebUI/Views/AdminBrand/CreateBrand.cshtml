@@ -12,17 +12,24 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Yeni Araç Marka Girişi</h4>
-                        <p class="card-subtitle mb-4">Araç ile ilgili marka adını aşağıdaki kutucuğa ekleyebilirsiniz. Veri girişinden sonra kaydet butonuna tıklayarak işlemi tamamlayabilirsiniz.</p>
+                        <p class="card-subtitle mb-4">
+                            Bu sayfa aracılığıyla yeni araç markaları ekleyebilirsiniz. 
+                            Araç markalarını sisteme dahil ederek, kiralama hizmetinizin çeşitliliğini artırabilir ve müşterilerinize daha fazla seçenek sunabilirsiniz. 
+                            Yeni bir araç markası eklerken, markanın adını doğru bir şekilde girmeniz yeterlidir. 
+                            Bu, sistemin düzgün çalışmasını ve araçlarınızı doğru bir şekilde sınıflandırılmasını sağlar.
+                            Marka adı ve gerekli bilgileri girdikten sonra, "Kaydet" butonuna basarak işlemi tamamlayabilirsiniz.
+                        </p>
                         <form method="post">
-
-
-
                             <div class="form-group">
                                 <label for="exampleInputName">Marka Adı</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="name" placeholder="Marka Girişi Yapınız">
                             </div>
 
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Arac Markasını Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Araç Markasını Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

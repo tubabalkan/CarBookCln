@@ -13,9 +13,13 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Yeni Ödeme Bilgisi Girişi</h4>
+                        <h4 class="card-title">Yeni Ödeme Bilgisi Giriş Sayfası</h4>
                         <p class="card-subtitle mb-4">
-                           Ödeme türü girişi
+                            Bu sayfa üzerinden araç kiralama işlemlerinizde kullanılacak yeni ödeme türlerini ekleyebilirsiniz. 
+                            Ödeme türleri, müşterilerinize sunacağınız ödeme seçeneklerini yönetmek için önemlidir.
+                            Yeni bir ödeme türü ekleyerek, farklı ödeme periyotları ve seçenekleri sunabilirsiniz.
+                            Eklediğiniz ödeme türü, müşterilerinizin araç kiralama işlemlerini daha esnek hale getirecektir.
+                            Ödeme türü eklerken, periyot adı gibi bilgileri girmeniz yeterli olacaktır.
                         </p>
                         <form method="post">
 
@@ -24,7 +28,12 @@
                                 <input type="text" class="form-control" id="exampleInputTitle" asp-for="Name" placeholder="Ödeme Türünü Giriniz">
                             </div>
                            
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Ödeme Bilgisini Kaydet</button>
+                           
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Ödeme Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

@@ -16,9 +16,10 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Locasyon Alanı</h4>
+                        <h4 class="card-title">Ana Sayfa - Lokasyon Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                           Lokasyon ile ilgili yazı yaz
+                            Bu sayfa üzerinden mevcut lokasyon bilgilerinizi görüntüleyebilir, yeni lokasyonlar ekleyebilir veya var olan lokasyonlar üzerinde güncelleme yapabilirsiniz.
+                            Lokasyon adı ve konum bilgileri, kullanıcılarınızın aradığı bilgilere kolayca ulaşabilmesini sağlamak için önemlidir. Lokasyonlarınızı doğru ve güncel tutarak, sisteminizin etkinliğini artırabilir ve ziyaretçilerinizin ihtiyaç duyduğu bilgilere hızlıca erişmelerini sağlayabilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -30,8 +31,6 @@
                                         <th>Sil</th>
                                         <th>Güncelle </th>
                                         <th>Konumu Gör </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,17 +38,37 @@
                                     {
                                         count++;
                                         <tr>
-
                                             <td>@count</td>
                                             <td>@item.Name</td>
-                                            <td><a href="/Admin/AdminLocation/RemoveLocation/@item.LocationId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId" class="btn btn-outline-info">Konumu Gör</a></td>
+                                            <td>
+                                                <a href="/Admin/AdminLocation/RemoveLocation/@item.LocationId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminLocation/UpdateLocation/@item.LocationId"
+                                                   class="btn btn-info btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-map-marker-alt me-2"></i> Konumu Gör
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminLocation/CreateLocation/" class="btn btn-outline-primary">Yeni Lokasyon Girişi</a></td>
+                            <a href="/Admin/AdminLocation/CreateLocation/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                <i class="fas fa-plus-circle"></i> Yeni Lokasyon Girişi
+                            </a>
                         </div>
                     </div>
                 </div>

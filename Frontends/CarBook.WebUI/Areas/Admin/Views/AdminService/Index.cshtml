@@ -5,18 +5,18 @@
     int count = 0;
 }
 
-
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Sevis Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa - Hizmet Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            servisssssssssss
+                            Hizmetlerimiz Sayfası: Bu sayfada, sunduğumuz tüm hizmetlerin detaylarını görüntüleyebilirsiniz.
+                            Yeni hizmetler ekleyebilir, mevcut hizmetler hakkında güncellemeler yapabilirsiniz.
+                            Her bir hizmet için başlık, açıklama, ikon ve diğer detayları belirleyerek, ziyaretçilerinizin kolayca erişebileceği bir liste oluşturabilirsiniz.
+                            Hizmetlerinizi daha etkili tanıtmak için sayfa üzerinden düzenleme işlemleri yapabilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -29,8 +29,6 @@
                                         <th>İkon</th>
                                         <th>Sil</th>
                                         <th>Güncelle </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,15 +40,31 @@
                                             <th>@item.Title</th>
                                             <th>@item.Description</th>
                                             <td><img src="@item.IconUrl" width="50" height="50" style="margin-right:10px" /></td>
+                                            <td>
+                                                <a href="/Admin/AdminService/RemoveService/@item.ServiceId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminService/UpdateService/@item.ServiceId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
 
-
-                                            <td><a href="/Admin/AdminService/RemoveService/@item.ServiceId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminService/UpdateService/@item.ServiceId" class="btn btn-outline-success">Güncelle</a></td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminService/CreateService/" class="btn btn-outline-primary">Yeni Servis Bilgisi Girişi</a></td>
+                          
+                            <td>
+                                <a href="/Admin/AdminService/CreateService/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Hizmet Bilgisi Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

@@ -15,17 +15,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Hizmet Bilgisi Güncelleme Sayfası</h4>
-                        <p class="card-subtitle mb-4">Hakkımda ile ilgili bilgilreri aşağıdaki kutucuklardan güncelleyebilirsiniz. Veri girişinden sonra kaydet butonuna tıklayarak işlemi tamamlayabilirsiniz.</p>
+                        <p class="card-subtitle mb-4">Hizmet Güncelleme Sayfası: Bu sayfa üzerinden mevcut hizmetlerinizi güncelleyebilirsiniz.
+                            Hizmetin başlığını, açıklamasını ya da ikonunu değiştirmek için gerekli düzenlemeleri yapabilirsiniz.
+                            Güncelleme işlemi sonrasında, hizmetlerinizin daha güncel ve etkili bir şekilde sunulmasını sağlayabilirsiniz. 
+                            Mevcut hizmetlerinizi düzenlerken, her zaman en doğru ve çekici bilgileri girdiğinizden emin olun..</p>
                         <form method="post">
-
-
                             <div class="form-group">
                                 <input type="hidden" asp-for="ServiceId" />
 
                                 <label for="exampleInputName"> İsim</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Title" placeholder="İsmi Giriniz">
                             </div>
-
                             <div class="form-group">
                                 <label for="exampleInputDescription"> Açıklama</label>
                                 <textarea rows="5" class="form-control" asp-for="Description" placeholder="Açıklamayı  Giriniz"></textarea>
@@ -34,9 +34,12 @@
                                 <label for="exampleInputImageUrl"> Icon Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="IconUrl" placeholder="Görsel Url Giriniz">
                             </div>
-
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Hizmet Billgisini Kaydet</button>
+                           
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Güncel Hizmet Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

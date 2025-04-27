@@ -4,11 +4,6 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-
-
-
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
@@ -16,20 +11,21 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Ödeme Bilgisi Güncelleme Sayfası</h4>
-                        <p class="card-subtitle mb-4">Ödeme ile ilgili bilgilreri aşağıdaki kutucuklardan güncelleyebilirsiniz. Veri girişinden sonra kaydet butonuna tıklayarak işlemi tamamlayabilirsiniz.</p>
+                        <p class="card-subtitle mb-4">Bu sayfa üzerinden mevcut ödeme türlerinizi güncelleyebilirsiniz. 
+                            Ödeme periyotları ve seçenekleri, müşterilerinize daha iyi hizmet sunabilmeniz için zaman zaman düzenlenebilir.
+                            Burada, mevcut ödeme türlerini düzenleyebilir ve yeni bilgiler ekleyebilirsiniz. 
+                            Ödeme türü güncelleme işlemi ile ödeme seçeneklerinizi güncel tutarak, kullanıcılarınızın daha rahat bir ödeme deneyimi yaşamasını sağlayabilirsiniz..</p>
                         <form method="post">
-
-
                             <div class="form-group">
                                 <input type="hidden" asp-for="PricingId" />
-
                                 <label for="exampleInputTitle"> Ödeme Türü</label>
                                 <input type="text" class="form-control" id="exampleInputTitle" asp-for="Name" placeholder="Ödeme Bilgisini Giriniz">
                             </div>
-
-                           
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Bannerı Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Güncel Ödeme Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

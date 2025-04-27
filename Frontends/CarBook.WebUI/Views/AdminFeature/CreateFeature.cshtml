@@ -11,17 +11,20 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Yeni Araç Özelliği Girişi</h4>
-                        <p class="card-subtitle mb-4">Araç ile ilgili özellikleri aşağıdaki kutucuğa ekleyebilirsiniz. Veri girişinden sonra kaydet butonuna tıklayarak işlemi tamamlayabilirsiniz.</p>
+                        <p class="card-subtitle mb-4">Bu sayfa, araçlarınıza yeni özellikler eklemek için kullanılır. 
+                            Özellik eklerken, sadece araçlarınızın tanıtımını kolaylaştıracak değil, aynı zamanda kullanıcıların araç seçimlerini daha bilinçli yapmalarını sağlayacak bilgilere de ulaşmalarını sağlarsınız.
+                            Yeni özellik eklerken sadece özellik adı girmeniz yeterlidir. Eklediğiniz özellikler, ilgili araçlarla ilişkilendirilebilir ve kolayca yönetilebilir.</p>
                         <form method="post">
-                          
-                           
-                           
                             <div class="form-group">
                                 <label for="exampleInputName">Özellik Adı</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="FeatureName" placeholder="Özellik Girişi Yapınız">
                             </div>
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Arac Özelliğini Kaydet</button>
+                           
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Araç Özelliğini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

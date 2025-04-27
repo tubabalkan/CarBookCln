@@ -15,9 +15,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Yeni Lokasyon Girişi</h4>
+                        <h4 class="card-title">Yeni Lokasyon Girişi Sayfası</h4>
                         <p class="card-subtitle mb-4">
-                           Lokasyon
+                            Bu sayfa üzerinden yeni bir lokasyon ekleyebilirsiniz.
+                            Lokasyon adı ve konum bilgilerini girerek, sisteminize yeni bir lokasyon kaydedebilirsiniz. Eklediğiniz lokasyonlar, kullanıcılarınızın daha kolay bir şekilde ulaşabileceği bilgilere sahip olacaktır.
+                            Lokasyon ekleme işlemini tamamladıktan sonra kaydet butonuna tıklamayı unutmayın.
                         </p>
                         <form method="post">
 
@@ -26,7 +28,12 @@
                                 <input type="text" class="form-control" id="exampleInputTitle" asp-for="Name" placeholder="Lokasyon Adını Giriniz">
                             </div>
 
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Lokasyonu Kaydet</button>
+                            
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Lokasyon Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

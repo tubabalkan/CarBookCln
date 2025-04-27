@@ -16,9 +16,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Referans Alanaı</h4>
+                        <h4 class="card-title">Ana Sayfa - Referans Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            referanssssss
+                            Bu sayfada, müşterilerinizin sizin hizmetleriniz hakkında yazdığı yorumları ve başlıklarını görebilir, yeni referanslar ekleyebilir ve mevcut referanslarınızı güncelleyebilirsiniz. 
+                            Referanslar, potansiyel müşterilerinizin hizmet kaliteniz hakkında bilgi edinmelerine yardımcı olur.
+                            Her bir referans, ad, soyad, yorum ve görsel içerebilir. Bu sayede, müşterilerinizin deneyimlerini daha etkili bir şekilde sergileyebilirsiniz.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -46,13 +48,31 @@
                                             <th>@item.Title</th>
                                             <th>@item.Comment</th>
                                             <td><img src="@item.ImageUrl" width="50" height="50" style="margin-right:10px" /> </td>
-                                            <td><a href="/Admin/AdminTestimonial/RemoveTestimonial/@item.TestimonialId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminTestimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>
+                                                <a href="/Admin/AdminTestimonial/RemoveTestimonial/@item.TestimonialId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 6px 12px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminTestimonial/UpdateTestimonial/@item.TestimonialId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 6px 12px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminTestimonial/CreateTestimonial/" class="btn btn-outline-primary">Yeni Referans Bilgisi Girişi</a></td>
+                            
+                            <td>
+                                <a href="/Admin/AdminTestimonial/CreateTestimonial/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Referans Bilgisi Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

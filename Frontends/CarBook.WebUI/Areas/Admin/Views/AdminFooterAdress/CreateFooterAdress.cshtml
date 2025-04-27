@@ -16,9 +16,11 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Yeni Footer Bilgisi Girişi</h4>
+                        <h4 class="card-title">Yeni Footer Bilgisi Giriş Sayfası</h4>
                         <p class="card-subtitle mb-4">
-                            Buraya bilgi gir
+                            Bu sayfa üzerinden sitenizin altbilgi (footer) alanında gösterilecek bilgileri ekleyebilirsiniz. Lütfen açıklama, adres, telefon numarası ve e-posta adresi gibi alanları eksiksiz doldurunuz.
+                            Girdiğiniz bilgiler, kullanıcıların sizinle iletişime geçmesini kolaylaştıracak ve sitenizin kurumsal görünümünü güçlendirecektir.
+                            Bilgileri ekledikten sonra, değişikliklerin görünür olması için kaydetmeyi unutmayınız.
                         </p>
                         <form method="post">
                             <div class="form-group">
@@ -37,7 +39,12 @@
                                 <label for="exampleInputImageUrl">Mail Adresi</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="Email" placeholder="Mail Adresini Giriniz">
                             </div>
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Footer Bilgisini Kaydet</button>
+                            
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Footer Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

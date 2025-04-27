@@ -12,11 +12,15 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Araba Özellikleri Listesi</h4>
+                        <h4 class="card-title">Ana Sayfa - Araba Özellikleri Listesi Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Arabalarla ilgili yeni özellik ekleme(Klima, Bluetooth, Audio, Elektirik vs.) özellikler listesi, özellikler üzerinde düzenleme ve bir özelliği kaldırma işlemini buradan gerçekleştirebilirsiniz.
-                            Temada veri tutarlılığını sağlayabilmek için lütfen 3'ün katı şeklinde veri ğitişi yapınız.
+                            Araç özellikleri sayfası üzerinden mevcut özelliklerinizi yönetebilir ve yeni özellikler ekleyebilirsiniz.
+                            Her araç için özellikleri düzenlemek, silmek veya yeni özellikler eklemek bu sayfadan kolayca yapılabilir.
+                            Özellikler, araçlarınızın özelliklerini daha detaylı şekilde tanımlamanıza olanak tanır. 
+                            Bu sayfa üzerinden, özellikleri kategorilere ayırabilir veya her bir araca özgü benzersiz özellikler ekleyebilirsiniz. 
+                            Araçlarınızın tanıtımlarını daha etkili hale getirmek için her zaman güncel ve doğru özellik bilgilerinin girildiğinden emin olun.
                         </p>
+
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
@@ -35,13 +39,27 @@
                                         <tr>
                                             <th scope="row">@count</th>
                                             <td>@item.FeatureName</td>
-                                            <td><a href="/AdminFeature/RemoveFeature/@item.FeatureId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/AdminFeature/UpdateFeature/@item.FeatureId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>
+                                                <a href="/AdminFeature/RemoveFeature/@item.FeatureId" class="btn btn-danger btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminFeature/UpdateFeature/@item.FeatureId" class="btn btn-success btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/AdminFeature/CreateFeature/" class="btn btn-outline-primary">Yeni Özellik Girişi</a></td>
+                            <td>
+                                <a href="/AdminFeature/CreateFeature/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Özellik Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

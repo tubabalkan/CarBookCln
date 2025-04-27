@@ -10,9 +10,12 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Araba Listesi</h4>
+                        <h4 class="card-title">Ana Sayfa - Araba Listesi Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Arabalarla ilgili ekleme, silme, güncelleme, arama ve listeleme gibi işlemleri bu sayfa üzerinden gerçekleştirebilirsiniz.
+                            Bu sayfada, kiralık araçlarınızı görüntüleyebilirsiniz. Araçlarınızın marka, model, vites türü, kilometre gibi önemli bilgilerini inceleyebilir, ayrıca her aracın fiyat bilgisi, detayları ve site üzerinden görünürlüğü gibi özelliklerini de kolayca kontrol edebilirsiniz.
+                            Araçlarınız hakkında ayrıntılı bilgi almak için "Detaylar" butonunu kullanarak her aracı ayrı ayrı inceleyebilirsiniz. Eğer araçla ilgili herhangi bir düzenleme yapmak isterseniz, "Güncelle" butonuna tıklayarak gerekli değişiklikleri yapabilirsiniz. Aracınızı sistemden kaldırmak için ise "Sil" butonunu kullanabilirsiniz.
+                            Yeni araç eklemek için ise "Yeni Araba Ekle" sayfasına yönlendirileceksiniz. Böylece araç listenizi dilediğiniz kadar genişletebilirsiniz.
+                            Müşterilerinizin ilgisini çekebilmek için araçlarınızı doğru ve dikkat çekici şekilde listeleyin.
                         </p>
                         <div class="table-responsive">
                             <table class="table mb-0">
@@ -40,16 +43,41 @@
                                             <td>@item.Model</td>
                                             <td>@item.Transmission</td>
                                             <td>@item.Km</td>
-                                            <td><a href="/AdminCar/RemoveCar/@item.CarId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/AdminCar/UpdateCar/@item.CarId" class="btn btn-outline-success">Güncelle</a></td>
-                                            <td><a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-outline-dark">Detaylar</a></td>
-                                            <td><a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-outline-warning">Sitede Gör</a></td>
-                                            <td><a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-outline-secondary">Fiyat Bilgileri</a></td>
+                                            <td>
+                                                <a href="/AdminCar/RemoveCar/@item.CarId" class="btn btn-danger btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminCar/UpdateCar/@item.CarId" class="btn btn-success btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-dark btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-info-circle me-2"></i> Detaylar
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-warning btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-eye me-2"></i> Sitede Gör
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/AdminCar/CarDetail/@item.CarId" class="btn btn-secondary btn-sm d-flex align-items-center justify-content-center" style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-tag me-2"></i> Fiyat Bilgileri
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/AdminCar/CreateCar/" class="btn btn-outline-primary">Yeni Araç Girişi</a></td>
+                            <td>
+                                <a href="/AdminCar/CreateCar/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Araç Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

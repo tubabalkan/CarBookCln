@@ -15,7 +15,8 @@
                     <div class="card-body">
                         <h4 class="card-title">Yeni Referans Bilgisi Girişi</h4>
                         <p class="card-subtitle mb-4">
-                            referanssssssss
+                            Yeni bir referans eklemek için, müşterilerinizin adını, soyadını, yorumunu ve görselini eklemeniz yeterlidir. Bu bilgilerle, müşterilerinizin araç kiralama deneyimlerini daha görünür kılabilirsiniz.
+                            Yeni referansları ekleyerek, müşteri güvenini artırabilir ve markanızı daha güçlü bir şekilde tanıtabilirsiniz.
                         </p>
                         <form method="post">
                             <div class="form-group">
@@ -23,19 +24,19 @@
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Referans İsim Giriniz">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputDescription"> Yorum</label>
-                                <input type="text" class="form-control" id="exampleInputName" asp-for="Comment" placeholder="Yorum Giriniz">
+                                <label for="exampleInputDescription"> Başlık</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Title" placeholder="Başlık Giriniz">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputDescription"> Başlık</label>
-
-                                <textarea rows="5" class="form-control" asp-for="Title" placeholder="Başlık  Giriniz"></textarea>
+                                <label for="exampleInputDescription"> Yorum</label>
+                                <textarea rows="5" class="form-control" asp-for="Comment" placeholder="Yorum  Giriniz"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputImageUrl"> Görsel Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel Url Giriniz">
                             </div>
                             <button type="submit" class="btn btn-primary waves-effect waves-light">Referans Bilgisini Kaydet</button>
+                          
                         </form>
                     </div>
                 </div>

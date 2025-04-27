@@ -3,21 +3,16 @@
     ViewData["Title"] = "CreateService";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-
-
-
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Yeni Hizmet Bilgisi Girişi</h4>
+                        <h4 class="card-title">Yeni Hizmet Bilgisi Giriş Sayfası</h4>
                         <p class="card-subtitle mb-4">
-                            Hizmetttt
+                            Yeni Hizmet Ekleme Sayfası: Buradan, sunduğunuz yeni hizmetleri ekleyebilirsiniz. Yeni hizmet eklerken, hizmetin başlığını, açıklamasını ve uygun bir ikon seçmeyi unutmayın.
+                            Böylece hizmetlerinizi kolayca tanıtabilir ve kullanıcıların ilgisini çekebilirsiniz. Hizmet ekleme işlemini tamamladıktan sonra, bu hizmeti ana sayfanızda görüntüleyebilirsiniz.
                         </p>
                         <form method="post">
                             <div class="form-group">
@@ -33,7 +28,11 @@
                                 <label for="exampleInputImageUrl"> Ikon Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="IconUrl" placeholder="Görsel Url Giriniz">
                             </div>
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Servis Bilgisini Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Hizmet Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

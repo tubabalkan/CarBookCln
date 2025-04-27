@@ -4,10 +4,6 @@
     ViewData["Title"] = "UpdateTestimonial";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
@@ -15,13 +11,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Referans Bilgisi Güncelleme Sayfası</h4>
-                        <p class="card-subtitle mb-4">referanss</p>
+                        <p class="card-subtitle mb-4">Mevcut referanslarınızı güncellemek için, başlık, yorum ve görsel gibi bilgileri değiştirebilirsiniz. Müşterilerinizin zaman içindeki değişen görüşlerini de yansıtmak adına, eski referansları güncellemek önemlidir. 
+                            Bu sayfa üzerinden mevcut referanslarınızı güncelleyerek, her zaman taze ve doğru bilgi sunabilirsiniz.</p>
                         <form method="post">
-
-
                             <div class="form-group">
                                 <input type="hidden" asp-for="TestimonialId" />
-
                                 <label for="exampleInputName"> İsim</label>
                                 <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="İsmi Giriniz">
                             </div>
@@ -37,9 +31,11 @@
                                 <label for="exampleInputImageUrl"> Image Url</label>
                                 <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Görsel Url Giriniz">
                             </div>
-
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Referans Billgisini Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Güncel Referans Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

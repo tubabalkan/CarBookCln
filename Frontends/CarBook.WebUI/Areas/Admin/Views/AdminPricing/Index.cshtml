@@ -14,11 +14,15 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Ana Sayfa Ödeme Türleri Alanı</h4>
+                        <h4 class="card-title">Ana Sayfa - Ödeme Türleri Alanı Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                            Araçlar ile ilgili kiralama opsiyonlarının yer aldığı sayfadır. 
+                            Bu sayfa, araç kiralama işlemlerinizde kullanılan ödeme türlerini yönetebileceğiniz bir alan sunmaktadır.
+                            Buradan, müşterilerinize sunabileceğiniz farklı ödeme seçeneklerini ekleyebilir, mevcut ödeme türlerini düzenleyebilir veya silebilirsiniz. 
+                            Ödeme türleri, kiralama süresi ve ödeme periyoduna göre çeşitlenebilir. 
+                            Bu sayede müşterilerinize esnek ödeme seçenekleri sunarak, kiralama deneyimlerini daha rahat ve kolay hale getirebilirsiniz. 
+                            Yeni bir ödeme türü eklemek veya mevcut bir ödeme türünü güncellemek için ilgili işlemi yapabilirsiniz.
                         </p>
-                        <div class="table-responsive"> 
+                        <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                     <tr>
@@ -39,13 +43,31 @@
 
                                             <td>@count</td>
                                             <td>@item.Name</td>
-                                            <td><a href="/Admin/AdminPricing/RemovePricing/@item.PricingId" class="btn btn-outline-danger">Sil</a></td>
-                                            <td><a href="/Admin/AdminPricing/UpdatePricing/@item.PricingId" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td>
+                                                <a href="/Admin/AdminPricing/RemovePricing/@item.PricingId"
+                                                   class="btn btn-danger btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-trash-alt me-2"></i> Sil
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/Admin/AdminPricing/UpdatePricing/@item.PricingId"
+                                                   class="btn btn-success btn-sm d-flex align-items-center justify-content-center"
+                                                   style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                                    <i class="fas fa-edit me-2"></i> Güncelle
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     }
                                 </tbody>
                             </table>
-                            <td><a href="/Admin/AdminPricing/CreatePricing/" class="btn btn-outline-primary">Yeni Ödeme Türü Girişi</a></td>
+                           
+                            <td>
+                                <a href="/Admin/AdminPricing/CreatePricing/" class="btn btn-primary btn-sm" style="border-radius: 8px; padding: 6px 12px;">
+                                    <i class="fas fa-plus-circle"></i> Yeni Ödeme Türü Girişi
+                                </a>
+                            </td>
                         </div>
                     </div>
                 </div>

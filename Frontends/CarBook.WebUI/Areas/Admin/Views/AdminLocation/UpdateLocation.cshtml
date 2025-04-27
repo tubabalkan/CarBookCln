@@ -4,12 +4,6 @@
     ViewData["Title"] = "UpdateLocation";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
-
-
-
-
-
-
 <div class="page-content">
     <div class="container-fluid">
         <div class="row">
@@ -17,20 +11,22 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Lokasyon Bilgisi Güncelleme Sayfası</h4>
-                        <p class="card-subtitle mb-4">Lokasyon güncelleme</p>
+                        <p class="card-subtitle mb-4">
+                            Bu sayfa, mevcut lokasyonlarınızın bilgilerini güncellemek için kullanılır.
+                            Lokasyon adı ve konum bilgilerini değiştirebilir, sistemdeki eski bilgileri güncelleyebilirsiniz.
+                            Güncelleme işlemi sonrası, doğru ve güncel lokasyon bilgileriyle sisteminizi düzenlemiş olursunuz.
+                        </p>
                         <form method="post">
-
-
                             <div class="form-group">
                                 <input type="hidden" asp-for="LocationId" />
-
                                 <label for="exampleInputTitle"> Lokasyon Adı</label>
                                 <input type="text" class="form-control" id="exampleInputTitle" asp-for="Name" placeholder="Lokasyon Adını Giriniz">
                             </div>
-
-
-
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">Güncel Lokasyonu Kaydet</button>
+                            <button type="submit"
+                                    class="btn btn-primary btn-sm d-flex align-items-center justify-content-center"
+                                    style="border-radius: 12px; padding: 8px 16px; transition: 0.3s;">
+                                <i class="fas fa-save me-2"></i> Güncel Lokasyon Bilgisini Kaydet
+                            </button>
                         </form>
                     </div>
                 </div>

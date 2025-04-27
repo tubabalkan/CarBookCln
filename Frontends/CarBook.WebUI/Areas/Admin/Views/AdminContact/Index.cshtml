@@ -17,9 +17,11 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Gelen Mesajlar</h4>
+                        <h4 class="card-title">Ana Sayfa - Gelen Mesajlar Bilgilendirmesi</h4>
                         <p class="card-subtitle mb-4">
-                           Buraya bililendirici bir yazı gir
+                            Bu sayfa üzerinden müşterilerden gelen iletişim mesajlarını görüntüleyebilirsiniz.
+                            Burada sadece gelen mesajların içeriğini görebilir, isim, e-posta, konu ve gönderim tarihi gibi bilgileri inceleyebilirsiniz.
+                            Herhangi bir düzenleme veya cevaplama işlemi bu ekran üzerinden yapılamamaktadır.
                         </p>
 
                         <table id="basic-datatable" class="table dt-responsive nowrap">
@@ -36,7 +38,7 @@
 
 
                             <tbody>
-                                @foreach(var item in Model)
+                                @foreach (var item in Model)
                                 {
                                     count++;
                                     <tr>
@@ -48,8 +50,8 @@
                                         <td>@item.SendDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</td>
                                     </tr>
                                 }
-                              
-                                
+
+
                             </tbody>
                         </table>
 
